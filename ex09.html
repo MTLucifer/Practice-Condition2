@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9</title>
+</head>
+<body>
+a,b,c > 0
+a + b > c
+b + c > a
+a + c > b
+<p>Nhập giá trị a <input type="number" id="a"></p>
+<p>Nhập giá trị b <input type="number" id="b"></p>
+<p>Nhập giá trị c <input type="number" id="c"></p>
+<button onclick="check()">Kiểm tra</button>
+<span id="result"></span>
+<script>
+    function check() {
+        let a = document.getElementById('a').value
+        let b = document.getElementById('b').value
+        let c = document.getElementById('c').value
+        if ( a > 0 && b > 0 && c > 0) {
+    //         if ( ( a + b ) > c){
+    //             if ( ( b + c ) > a){
+    //                 if ( ( a + c ) > b ){
+    //                     document.getElementById('result').innerText = "Đây là 3 cạnh của 1 tam giác."
+    //                 }
+    //                 else {
+    //                     document.getElementById('result').innerText = "Đây không là 3 cạnh của 1 tam giác."
+    //                 }
+    //             }
+    //             else {
+    //                 document.getElementById('result').innerText = "Đây không là 3 cạnh của 1 tam giác."
+    //             }
+    //
+    //         }
+    //         else {
+    //             document.getElementById('result').innerText = "Đây không là 3 cạnh của 1 tam giác."
+    //         }
+    //     }
+    //     else {
+    //         document.getElementById('result').innerText = "Đây không là 3 cạnh của 1 tam giác."
+    //     }
+    // }
+</script>
+</body>
+</html>

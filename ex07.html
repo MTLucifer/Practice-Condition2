@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7</title>
+</head>
+<body>
+<span id="result"></span>
+<script>
+    let a = prompt('Nhập giá trị của a');
+    let b = prompt('Nhập giá trị của b');
+    let c = prompt('Nhập giá trị của c');
+    let delta = (b**2) - (4*a*c);
+    if (a==0) {
+        if (b == 0 && c == 0){
+            alert("Phương trình vô số nghiệm.")
+        }
+        else if (b == 0 ){
+            alert("Phương trình vô nghiệm.")
+        }
+        else {
+            let x = (-c)/b;
+            document.getElementById('result').innerText = "Phương trình có nghiệm là: " + x;
+        }
+    }
+    else {
+        if (delta > 0) {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a)
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a)
+            document.getElementById('result').innerText = "Phương trình có 2 nghiệm: x1= " + x1 + "; x2 = " + x2;
+        }
+        if (delta == 0) {
+            let x1 = -b / (2 * a)
+            document.getElementById('result').innerText = "Phương trình có 2 nghiệm giống nhau: x1= x2 = " + x1;
+        }
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+Nhập dữ liệu: <input type="number" id="meter" placeholder="Số mét">
+<br>
+<input type="button" onclick="check()" value="Chuyển đổi">
+<span id="feet"></span>
+<script>
+    function check(){
+        let meter = document.getElementById('meter').value
+        let feet = meter * 3.2808
+        document.getElementById('feet').innerText = "Giá trị feet là: " + feet
+    }
+</script>
+</body>
+</html>

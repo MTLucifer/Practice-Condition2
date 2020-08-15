@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5</title>
+</head>
+<body>
+<span id="area"></span>
+<script>
+    let a = prompt("Nhập giá trị cạnh a")
+    let b = prompt("Nhập giá trị cạnh b")
+    if (a>0 && b>0) {
+        let area = (a * b)/2;
+        document.getElementById('area').innerText = "Diện tích hình tam giác là: " + area + " mét vuông"}
+    else {
+        alert("Giá trị sai!")
+    }
+</script>
+</body>
+</html>

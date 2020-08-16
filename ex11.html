@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 11</title>
+</head>
+<body>
+<p>Thu nhập theo năm <input type="number" id="year" placeholder="Thu nhập"></p>
+<p>Thu nhập theo tháng <input type="number" id="month" placeholder="Thu nhập"></p>
+<button onclick="check()">Kiểm tra</button>
+<script>
+    function check(){
+        let year = +document.getElementById('year').value;
+        switch ((year<61000000)?1:(year<120000000)?2:(year<216000000)?3:(year<384000000)?4:(year<624000000)?5:(year<960000000)?6:7) {
+            case 1:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.05));
+                break;
+            case 2:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.1));
+                break;
+            case 3:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.15));
+                break;
+            case 4:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.20));
+                break;
+            case 5:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.25));
+                break;
+            case 6:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.30));
+                break;
+            case 7:
+                alert("Thuế thu nhập cá nhân theo năm là: " + (year*0.35));
+                break;
+        }
+        let month = document.getElementById('month').value;
+        switch ((month<5000000)?1:(month<10000000)?2:(month<18000000)?3:(month<32000000)?4:(month<52000000)?5:(month<80000000)?6:7) {
+            case 1:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.05));
+                break;
+            case 2:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.1));
+                break;
+            case 3:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.15));
+                break;
+            case 4:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.20));
+                break;
+            case 5:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.25));
+                break;
+            case 6:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.30));
+                break;
+            case 7:
+                alert("Thuế thu nhập cá nhân theo tháng là: " + (month*0.35));
+                break;
+        }
+    }
+</script>
+</body>
+</html>

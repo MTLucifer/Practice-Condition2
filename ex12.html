@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 12</title>
+</head>
+<body>
+<p>Nhập số tiền cần vay: <input type="number" id="money"></p>
+<p>Số tháng cần vay:<select id="month">
+    <option value="6" id="6">6 tháng</option>
+    <option value="12" id="12">12 tháng</option>
+    <option value="18" id="18">18 tháng</option>
+    <option value="24" id="24">24 tháng</option>
+    <option value="36" id="36">36 tháng</option>
+</select></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+    function check(){
+        let month = document.getElementById('month').value;
+        let money = document.getElementById('money').value;
+        switch (month) {
+            case '6':
+                document.getElementById('result').innerText = "Lãi cần trả: " + (((money*0.072)/12)*month) ;
+                break;
+            case '12':
+                document.getElementById('result').innerText = "Lãi cần trả: " + (((money*0.076)/12)*month) ;
+                break;
+            case '18':
+                document.getElementById('result').innerText = "Lãi cần trả: " + (((money*0.081)/12)*month) ;
+                break;
+            case '24':
+                document.getElementById('result').innerText = "Lãi cần trả: " + (((money*0.085)/12)*month) ;
+                break;
+            case '36':
+                document.getElementById('result').innerText = "Lãi cần trả: " + (((money*0.092)/12)*month) ;
+                break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 10</title>
+</head>
+<body>
+<span id="result"> </span>
+<script>
+    let number = parseInt(prompt("Nhập số điện:"))
+    if (number<=50) {
+        document.getElementById('result').innerText = "Thành tiền: " + (number*1678)
+    }
+    else if (number<101){
+        document.getElementById('result').innerText = "Thành tiền: " + ((50*1678)+(number-50)*1734);
+    }
+    else if (number<201){
+        document.getElementById('result').innerText = "Thành tiền: " + ((50*1678)+(50*1734)+(number-100)*2014);
+    }
+    else if (number<301){
+        document.getElementById('result').innerText = "Thành tiền: " + ((50*1678)+(50*1734)+(100*2014)+(number-200)*2536);
+    }
+    else if (number<401){
+        document.getElementById('result').innerText = "Thành tiền: " + ((50*1678)+(50*1734)+(100*2014)+(100*2536)+(number-300)*2834);
+    }
+    else {
+        document.getElementById('result').innerText = "Thành tiền: " + ((50*1678)+(50*1734)+(100*2014)+(100*2536)+(100*2834)+(number-400)*2927);
+    }
+
+</script>
+</body>
+</html>
